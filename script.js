@@ -12,7 +12,12 @@ class Persona {
 }
 const usuarios = []
 const clientes = []
-const turnos = []
+const lunes = []
+const martes = []
+const miercoles = []
+const jueves = []
+const viernes = []
+const sabado = []
 let registro = false
 let inicio = false
 let carga = false
@@ -85,6 +90,24 @@ while (inicio === true){
                     
                 switch (dia){
                     case "1":
+                        carga = false
+                        alert("Por favor ingrese los datos solicitados del cliente")
+                        do {
+                            let nombre = prompt ("Nombre:")
+                            let apellido = prompt ("Apellido:")
+                            let edad = prompt ("Edad:")
+                            let mail = prompt ("Mail:")
+                            let telefono = prompt ("Teléfono:")
+                            let hora = prompt ("Hora del turno:")
+                            if (nombre && apellido && edad && mail && telefono && hora != " "){
+                                clientes.push(new Persona(nombre, apellido, edad, mail, telefono, hora))
+                                lunes.push(new Persona(nombre, apellido, edad, mail, telefono, hora))
+                                alert("Datos cargados de manera exitosa ")
+                                carga = true
+                            }else{
+                                alert("Uno o más campos se encuentran incompletos \n \n Ingrese los datos nuevamente!  ")
+                            }
+                        } while (carga == false) 
                         break
                     case "2":
                         break
@@ -101,18 +124,9 @@ while (inicio === true){
                         break
                     default:
                         alert("Opción ingresada incorrecta vuelva a intentarlo nuevamente.")
+                        break
                 }
                 }
-                /* carga = false
-                alert("Por favor ingrese los datos solicitados")
-                do {
-                    let nombre
-                    let apellido
-                    let edad
-                    let mail
-                    let telefono
-                    let hora
-                } while (carga == false) */
                 break
             case "2":
                 break
@@ -123,6 +137,7 @@ while (inicio === true){
             case "5":
                 alert("¡Sesión cerrada exitosamente! \n \nGracias por utilizar Turnos Web 2.0")
                 x++
+                break
             default:
                 alert("Opción ingresada incorrecta vuelva a intentarlo nuevamente.")
                 break
