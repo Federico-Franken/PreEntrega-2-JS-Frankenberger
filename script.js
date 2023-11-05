@@ -1,5 +1,5 @@
 class Persona {
-    constructor (nombre, apellido, usuario, contraseña, edad, mail,telefono){
+    constructor (nombre, apellido, usuario, contraseña, edad, mail,telefono, time){
         this.nombre = nombre;
         this.apellido = apellido;
         this.usuario = usuario;
@@ -7,13 +7,18 @@ class Persona {
         this.edad = edad;
         this.mail = mail;
         this.telefono = telefono;
+        this.time= time ;
     }
 }
 const usuarios = []
 const clientes = []
+const turnos = []
 let registro = false
 let inicio = false
+let carga = false
 let i = 0
+let x = 0
+let y = 0
 
 /* INTRODUCCIÓN */
 
@@ -70,7 +75,59 @@ while (i < 1){
 /* MENU DE TURNOS */
 
 while (inicio === true){
-    alert("menu")
+    while (x < 1){
+        preguntax = prompt ("                                              TURNOS WEB 2.0 \n \n         1- Ingresar turnos \n \n         2- Anular turnos \n \n         3- Ver turnos \n \n         4- Buscar cliente \n \n         ---------------------------\n \n        5- Cerrar sesión")
+
+        switch (preguntax){
+            case "1":
+                while (y < 1){
+                    dia = prompt ("Selecciones el día del turno: \n \n 1- Lunes \n \n 2- Martes \n \n 3- Miércoles \n \n 4- Jueves \n \n 5- Viernes \n \n 6- Sábado \n \n---------------------------\n \n 7- Volvel al menú" )
+                    
+                switch (dia){
+                    case "1":
+                        break
+                    case "2":
+                        break
+                    case "3":
+                        break
+                    case "4":
+                        break
+                    case "5":
+                        break 
+                    case "6":
+                        break
+                    case "7":
+                        y++
+                        break
+                    default:
+                        alert("Opción ingresada incorrecta vuelva a intentarlo nuevamente.")
+                }
+                }
+                /* carga = false
+                alert("Por favor ingrese los datos solicitados")
+                do {
+                    let nombre
+                    let apellido
+                    let edad
+                    let mail
+                    let telefono
+                    let hora
+                } while (carga == false) */
+                break
+            case "2":
+                break
+            case "3":
+                break
+            case "4":
+                break
+            case "5":
+                alert("¡Sesión cerrada exitosamente! \n \nGracias por utilizar Turnos Web 2.0")
+                x++
+            default:
+                alert("Opción ingresada incorrecta vuelva a intentarlo nuevamente.")
+                break
+        }
+    }
 
 }
 
