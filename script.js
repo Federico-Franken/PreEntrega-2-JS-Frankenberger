@@ -110,14 +110,104 @@ while (inicio === true){
                         } while (carga == false) 
                         break
                     case "2":
+                        carga = false
+                        alert("Por favor ingrese los datos solicitados del cliente")
+                        do {
+                            let nombre = prompt ("Nombre:")
+                            let apellido = prompt ("Apellido:")
+                            let edad = prompt ("Edad:")
+                            let mail = prompt ("Mail:")
+                            let telefono = prompt ("Teléfono:")
+                            let hora = prompt ("Hora del turno:")
+                            if (nombre && apellido && edad && mail && telefono && hora != " "){
+                                clientes.push(new Persona(nombre, apellido, edad, mail, telefono, hora))
+                                martes.push(new Persona(nombre, apellido, edad, mail, telefono, hora))
+                                alert("Datos cargados de manera exitosa ")
+                                carga = true
+                            }else{
+                                alert("Uno o más campos se encuentran incompletos \n \n Ingrese los datos nuevamente!  ")
+                            }
+                        } while (carga == false) 
                         break
                     case "3":
+                        carga = false
+                        alert("Por favor ingrese los datos solicitados del cliente")
+                        do {
+                            let nombre = prompt ("Nombre:")
+                            let apellido = prompt ("Apellido:")
+                            let edad = prompt ("Edad:")
+                            let mail = prompt ("Mail:")
+                            let telefono = prompt ("Teléfono:")
+                            let hora = prompt ("Hora del turno:")
+                            if (nombre && apellido && edad && mail && telefono && hora != " "){
+                                clientes.push(new Persona(nombre, apellido, edad, mail, telefono, hora))
+                                miercoles.push(new Persona(nombre, apellido, edad, mail, telefono, hora))
+                                alert("Datos cargados de manera exitosa ")
+                                carga = true
+                            }else{
+                                alert("Uno o más campos se encuentran incompletos \n \n Ingrese los datos nuevamente!  ")
+                            }
+                        } while (carga == false) 
                         break
                     case "4":
+                        carga = false
+                        alert("Por favor ingrese los datos solicitados del cliente")
+                        do {
+                            let nombre = prompt ("Nombre:")
+                            let apellido = prompt ("Apellido:")
+                            let edad = prompt ("Edad:")
+                            let mail = prompt ("Mail:")
+                            let telefono = prompt ("Teléfono:")
+                            let hora = prompt ("Hora del turno:")
+                            if (nombre && apellido && edad && mail && telefono && hora != " "){
+                                clientes.push(new Persona(nombre, apellido, edad, mail, telefono, hora))
+                                jueves.push(new Persona(nombre, apellido, edad, mail, telefono, hora))
+                                alert("Datos cargados de manera exitosa ")
+                                carga = true
+                            }else{
+                                alert("Uno o más campos se encuentran incompletos \n \n Ingrese los datos nuevamente!  ")
+                            }
+                        } while (carga == false) 
                         break
                     case "5":
-                        break 
+                        carga = false
+                        alert("Por favor ingrese los datos solicitados del cliente")
+                        do {
+                            let nombre = prompt ("Nombre:")
+                            let apellido = prompt ("Apellido:")
+                            let edad = prompt ("Edad:")
+                            let mail = prompt ("Mail:")
+                            let telefono = prompt ("Teléfono:")
+                            let hora = prompt ("Hora del turno:")
+                            if (nombre && apellido && edad && mail && telefono && hora != " "){
+                                clientes.push(new Persona(nombre, apellido, edad, mail, telefono, hora))
+                                viernes.push(new Persona(nombre, apellido, edad, mail, telefono, hora))
+                                alert("Datos cargados de manera exitosa ")
+                                carga = true
+                            }else{
+                                alert("Uno o más campos se encuentran incompletos \n \n Ingrese los datos nuevamente!  ")
+                            }
+                        } while (carga == false) 
+                        break
                     case "6":
+                        carga = false
+                        alert("Por favor ingrese los datos solicitados del cliente")
+                        do {
+                            let nombre = prompt ("Nombre:")
+                            let apellido = prompt ("Apellido:")
+                            let edad = prompt ("Edad:")
+                            let mail = prompt ("Mail:")
+                            let telefono = prompt ("Teléfono:")
+                            let hora = prompt ("Hora del turno:")
+                            if (nombre && apellido && edad && mail && telefono && hora != " "){
+                                clientes.push(new Persona(nombre, apellido, edad, mail, telefono, hora))
+                                sabado.push(new Persona(nombre, apellido, edad, mail, telefono, hora))
+                                alert("Datos cargados de manera exitosa ")
+                                carga = true
+                            }else{
+                                alert("Uno o más campos se encuentran incompletos \n \n Ingrese los datos nuevamente!  ")
+                            }
+                        } while (carga == false) 
                         break
                     case "7":
                         y++
