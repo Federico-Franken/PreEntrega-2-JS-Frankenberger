@@ -31,7 +31,7 @@ alert("                                              TURNOS WEB 2.0 \n \n       
 
 /* REGISTRO E INICIO DE SESIÓN */ 
 
-while (i < 1){
+/* while (i < 1){
     pregunta1 = prompt("Seleccione una de las siguientes opciones:\n A- Iniciar sesión \n B- Regitrarse \n C- Salir. ")
     switch (pregunta1){
         case "A":
@@ -75,8 +75,8 @@ while (i < 1){
             alert("Letra incorrecta o en minusculas")
             break
     }
-}
-
+} */
+inicio=true
 /* MENU DE TURNOS */
 
 while (inicio === true){
@@ -85,6 +85,7 @@ while (inicio === true){
 
         switch (preguntax){
             case "1":
+                y=0
                 while (y < 1){
                     dia = prompt ("Selecciones el día del turno: \n \n 1- Lunes \n \n 2- Martes \n \n 3- Miércoles \n \n 4- Jueves \n \n 5- Viernes \n \n 6- Sábado \n \n---------------------------\n \n 7- Volvel al menú" )
                     
@@ -221,8 +222,51 @@ while (inicio === true){
             case "2":
                 break
             case "3":
+                y=0
+                while (y < 1){
+                    dia = prompt ("Selecciones el día que desea ver los turnos: \n \n 1- Lunes \n \n 2- Martes \n \n 3- Miércoles \n \n 4- Jueves \n \n 5- Viernes \n \n 6- Sábado \n \n---------------------------\n \n 7- Volvel al menú" )
+                    
+                switch (dia){
+                    case "1":
+                        for (const producto of lunes){
+                        alert (JSON.stringify(producto,null,4))
+                        } 
+                        break
+                    case "2":
+                        for (const producto of martes){
+                            alert (JSON.stringify(producto,null,4))
+                            } 
+                        break
+                    case "3":
+                        for (const producto of miercoles){
+                            alert (JSON.stringify(producto,null,4))
+                            } 
+                        break
+                    case "4":
+                        for (const producto of jueves){
+                            alert (JSON.stringify(producto,null,4))
+                            } 
+                        break
+                    case "5":
+                        for (const producto of viernes){
+                            alert (JSON.stringify(producto,null,4))
+                            } 
+                        break
+                    case "6":
+                        for (const producto of sabado){
+                            alert (JSON.stringify(producto,null,4))
+                            } 
+                        break
+                    case "7":
+                        y++
+                        break
+                    default:
+                        alert("Opción ingresada incorrecta vuelva a intentarlo nuevamente.")
+                        break
+                }
+                }
                 break
-            case "4":
+            case "4": 
                 break
             case "5":
                 alert("¡Sesión cerrada exitosamente! \n \nGracias por utilizar Turnos Web 2.0")
@@ -236,6 +280,9 @@ while (inicio === true){
 
 }
 
+/* for (const producto of lunes){
+    alert (JSON.stringify(producto,null,4))
+ } */
 
 
 
