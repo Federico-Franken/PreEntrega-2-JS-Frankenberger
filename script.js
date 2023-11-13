@@ -77,7 +77,6 @@ alert("                                              TURNOS WEB 2.0 \n \n       
             break
     }
 } 
-inicio=true
 /* MENU DE TURNOS */
 
 while (inicio === true){
