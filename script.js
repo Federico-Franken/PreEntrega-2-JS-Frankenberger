@@ -21,6 +21,7 @@ const sabado = []
 let registro = false
 let inicio = false
 let carga = false
+let eliminar = false
 let i = 0
 let x = 0
 let y = 0
@@ -31,7 +32,7 @@ alert("                                              TURNOS WEB 2.0 \n \n       
 
 /* REGISTRO E INICIO DE SESIÓN */ 
 
-/* while (i < 1){
+ while (i < 1){
     pregunta1 = prompt("Seleccione una de las siguientes opciones:\n A- Iniciar sesión \n B- Regitrarse \n C- Salir. ")
     switch (pregunta1){
         case "A":
@@ -75,19 +76,19 @@ alert("                                              TURNOS WEB 2.0 \n \n       
             alert("Letra incorrecta o en minusculas")
             break
     }
-} */
+} 
 inicio=true
 /* MENU DE TURNOS */
 
 while (inicio === true){
     while (x < 1){
-        preguntax = prompt ("                                              TURNOS WEB 2.0 \n \n         1- Ingresar turnos \n \n         2- Anular turnos \n \n         3- Ver turnos \n \n         4- Buscar cliente \n \n         ---------------------------\n \n        5- Cerrar sesión")
+        preguntax = prompt ("                                              TURNOS WEB 2.0 \n \n         1- Ingresar turnos \n \n         2- Anular turnos \n \n         3- Ver turnos \n \n          ---------------------------\n \n        4- Cerrar sesión")
 
         switch (preguntax){
             case "1":
                 y=0
                 while (y < 1){
-                    dia = prompt ("Selecciones el día del turno: \n \n 1- Lunes \n \n 2- Martes \n \n 3- Miércoles \n \n 4- Jueves \n \n 5- Viernes \n \n 6- Sábado \n \n---------------------------\n \n 7- Volvel al menú" )
+                    dia = prompt ("Seleccione el día del turno: \n \n 1- Lunes \n \n 2- Martes \n \n 3- Miércoles \n \n 4- Jueves \n \n 5- Viernes \n \n 6- Sábado \n \n---------------------------\n \n 7- Volvel al menú" )
                     
                 switch (dia){
                     case "1":
@@ -220,6 +221,128 @@ while (inicio === true){
                 }
                 break
             case "2":
+                let anularturno = prompt ("Seleccione el día del turno a anular: \n \n 1- Lunes \n \n 2- Martes \n \n 3- Miércoles \n \n 4- Jueves \n \n 5- Viernes \n \n 6- Sábado \n \n---------------------------\n \n 7- Volvel al menú")
+                    switch (anularturno){
+                     case "1":
+                        eliminar = false
+                        do{
+                            let borrarcel = prompt ("Ingrese el apellido del turno a eliminar:")
+                            const eleminarlunes = (borrar) => {
+                                let index = lunes.map (suprimir => suprimir.apellido ) .indexOf(borrar)
+                                
+                                if (index != -1) {
+                                    lunes.splice(index,1)
+                                    alert("El turno se borro con exito!")
+                                    eliminar = true
+                                }else{
+                                    alert("El apellido ingresado es incorrecto, favor volver a intentar!")
+                                    eliminar = true
+                                }
+                            }
+                            eleminarlunes(borrarcel)
+                        }while (eliminar==false)
+                        break
+                     case "2":
+                        eliminar = false
+                        do{
+                            let borrarcel = prompt ("Ingrese el apellido del turno a eliminar:")
+                            const eleminarmartes = (borrar) => {
+                                let index = martes.map (suprimir => suprimir.apellido ) .indexOf(borrar)
+                                
+                                if (index != -1) {
+                                    martes.splice(index,1)
+                                    alert("El turno se borro con exito!")
+                                    eliminar = true
+                                }else{
+                                    alert("El apellido ingresado es incorrecto, favor volver a intentar!")
+                                    eliminar = true
+                                }
+                            }
+                            eleminarmartes(borrarcel)
+                        }while (eliminar==false)
+                        break
+                     case "3":
+                        eliminar = false
+                        do{
+                            let borrarcel = prompt ("Ingrese el apellido del turno a eliminar:")
+                            const eleminarmiercoles = (borrar) => {
+                                let index = miercoles.map (suprimir => suprimir.apellido ) .indexOf(borrar)
+                                
+                                if (index != -1) {
+                                    miercoles.splice(index,1)
+                                    alert("El turno se borro con exito!")
+                                    eliminar = true
+                                }else{
+                                    alert("El apellido ingresado es incorrecto, favor volver a intentar!")
+                                    eliminar = true
+                                }
+                            }
+                            eleminarmiercoles(borrarcel)
+                        }while (eliminar==false)
+                        break
+                     case "4":
+                        eliminar = false
+                        do{
+                            let borrarcel = prompt ("Ingrese el apellido del turno a eliminar:")
+                            const eleminarjueves = (borrar) => {
+                                let index = jueves.map (suprimir => suprimir.apellido ) .indexOf(borrar)
+                                
+                                if (index != -1) {
+                                    jueves.splice(index,1)
+                                    alert("El turno se borro con exito!")
+                                    eliminar = true
+                                }else{
+                                    alert("El apellido ingresado es incorrecto, favor volver a intentar!")
+                                    eliminar = true
+                                }
+                            }
+                            eleminarjueves(borrarcel)
+                        }while (eliminar==false)
+                        break
+                     case "5":
+                        eliminar = false
+                        do{
+                            let borrarcel = prompt ("Ingrese el apellido del turno a eliminar:")
+                            const eleminarviernes = (borrar) => {
+                                let index = viernes.map (suprimir => suprimir.apellido ) .indexOf(borrar)
+                                
+                                if (index != -1) {
+                                    viernes.splice(index,1)
+                                    alert("El turno se borro con exito!")
+                                    eliminar = true
+                                }else{
+                                    alert("El apellido ingresado es incorrecto, favor volver a intentar!")
+                                    eliminar = true
+                                }
+                            }
+                            eleminarviernes(borrarcel)
+                        }while (eliminar==false)
+                        break
+                     case "6":
+                        eliminar = false
+                        do{
+                            let borrarcel = prompt ("Ingrese el apellido del turno a eliminar:")
+                            const eleminarsabado = (borrar) => {
+                                let index = sabado.map (suprimir => suprimir.apellido ) .indexOf(borrar)
+                                
+                                if (index != -1) {
+                                    sabado.splice(index,1)
+                                    alert("El turno se borro con exito!")
+                                    eliminar = true
+                                }else{
+                                    alert("El apellido ingresado es incorrecto, favor volver a intentar!")
+                                    eliminar = true
+                                }
+                            }
+                            eleminarsabado(borrarcel)
+                        }while (eliminar==false)
+                        break
+                     case "7":
+                     break
+                     default:
+                        alert ("Opción ingresada incorrecta vuelva a intentarlo nuevamente.")
+                        break
+                    }
                 break
             case "3":
                 y=0
@@ -266,9 +389,7 @@ while (inicio === true){
                 }
                 }
                 break
-            case "4": 
-                break
-            case "5":
+            case "4":
                 alert("¡Sesión cerrada exitosamente! \n \nGracias por utilizar Turnos Web 2.0")
                 x++
                 break
@@ -279,13 +400,6 @@ while (inicio === true){
     }
 
 }
-
-/* for (const producto of lunes){
-    alert (JSON.stringify(producto,null,4))
- } */
-
-
-
 
 
 
